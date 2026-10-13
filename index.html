@@ -1,112 +1,178 @@
 <!DOCTYPE html>
 <html>
-  <head> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maya Torres | Real Estate</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background-color: #f5f1ea;
-        color: #2b2b2b;
-      }
-      .hero {
-        background-color: #1f3a4d;
-        color: white;
-        text-align: center;
-        padding: 80px 20px;
-      }
-      .hero h1 {
-        font-size: 40px;
-        margin-bottom: 10px;
-      }
-      .button {
-        display: inline-block;
-        background-color: #d9a441;
-        color: #1f3a4d;
-        padding: 14px 28px;
-        text-decoration: none;
-        font-weight: bold;
-        border-radius: 6px;
-        margin-top: 20px;
-      }
-      .about {
-        max-width: 600px;
-        margin: 40px auto;
-        padding: 0 20px;
-        text-align: center;
-      }      
-      .listings {
-        max-width: 900px;
-        margin: 40px auto;
-        padding: 0 20px;
-        text-align: center;
-      }
-      .cards {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .card {
-        background-color: white;
-        width: 260px;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      }
-      .price {
-        color: #1f3a4d;
-        font-size: 22px;
-        font-weight: bold;
-      }
-      
-      .contact {
-        background-color: #1f3a4d;
-        color: white;
-        text-align: center;
-        padding: 50px 20px;
-        margin-top: 40px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="hero">
-      <h1>Find Your Dream Home</h1>
-      <p>Maya Torres, helping families buy and sell in Austin</p>
-      <a class="button" href="#contact">Get a Free Home Valuation</a>
-    </div>
 
-    <div class="about">
-      <h2>About Maya</h2>
-      <p>I help families find homes they love, with honest advice and fast replies.</p>
-    </div>    
-    
-    <div class="listings">
-      <h2>Featured Listings</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Modern Family Home</h3>
-          <p class="price">$425,000</p>
-          <p>3 bed | 2 bath | Austin, TX</p>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maya Torres | Real Estate</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5f1ea;
+      color: #2b2b2b;
+    }
+
+    .hero {
+      background-color: #1f3a4d;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #d9a441;
+      color: #1f3a4d;
+      padding: 14px 28px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+
+    .about {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .listings {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: white;
+      width: 260px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .price {
+      color: #1f3a4d;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .contact {
+      background-color: #1f3a4d;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      margin-top: 40px;
+    }
+
+    .photos {
+      position: relative;
+      height: 180px;
+      overflow: hidden;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .photos img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.6s ease;
+    }
+
+    .photos img:nth-child(2) {
+      opacity: 0;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .card:hover .photos img:nth-child(2) {
+      opacity: 1;
+    }
+
+    .button {
+      transition: transform 0.2s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero">
+    <h1>Find Your Dream Home</h1>
+    <p>Maya Torres, helping families buy and sell in Austin</p>
+    <a class="button" href="#contact">Get a Free Home Valuation</a>
+  </div>
+
+  <div class="about">
+    <h2>About Maya</h2>
+    <p>I help families find homes they love, with honest advice and fast replies.</p>
+  </div>
+
+  <div class="listings">
+    <h2>Featured Listings</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="photos">
+          <img src="images/house1-outside.jpg" alt="Front of the modern family home">
+          <img src="images/house1-inside.jpg" alt="Living room of the modern family home">
         </div>
-        <div class="card">
-          <h3>Cozy Starter Home</h3>
-          <p class="price">$310,000</p>
-          <p>2 bed | 1 bath | Round Rock, TX</p>
+        <h3>Modern Family Home</h3>
+        <p class="price">$425,000</p>
+        <p>3 bed | 2 bath | Austin, TX</p>
+      </div>
+      <div class="card">
+        <div class="photos">
+          <img src="images/house2-outside.jpg" alt="Front of the cozy starter home">
+          <img src="images/house2-inside.jpg" alt="Inside the cozy starter home">
         </div>
-        <div class="card">
-          <h3>Spacious Townhouse</h3>
-          <p class="price">$365,000</p>
-          <p>3 bed | 2.5 bath | Cedar Park, TX</p>
+        <h3>Cozy Starter Home</h3>
+        <p class="price">$310,000</p>
+        <p>2 bed | 1 bath | Round Rock, TX</p>
+      </div>
+      <div class="card">
+        <div class="photos">
+          <img src="images/house3-outside.jpg" alt="Front of the spacious townhouse">
+          <img src="images/house3-inside.jpg" alt="Inside the spacious townhouse">
         </div>
+        <h3>Spacious Townhouse</h3>
+        <p class="price">$365,000</p>
+        <p>3 bed | 2.5 bath | Cedar Park, TX</p>
       </div>
     </div>
-    
-    <div class="contact" id="contact">
-      <h2>Contact Maya</h2>
-      <p>Phone: (555) 123-4567</p>
-      <p>Email: maya@example.com</p>
-    </div>
-  </body>
+  </div>
+
+  <div class="contact" id="contact">
+    <h2>Contact Maya</h2>
+    <p>Phone: (555) 123-4567</p>
+    <p>Email: maya@example.com</p>
+  </div>
+</body>
+
 </html>
