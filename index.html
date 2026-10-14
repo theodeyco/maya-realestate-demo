@@ -104,21 +104,31 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
-    }
-
-    .card:hover .photos img:nth-child(2) {
-      opacity: 1;
-    }
-
     .button {
       transition: transform 0.2s ease;
     }
 
-    .button:hover {
-      transform: scale(1.05);
+    .card.show-inside .photos img:nth-child(2) {
+      opacity: 1;
+    }
+
+    .card {
+      cursor: pointer;
+    }
+
+    @media (hover: hover) {
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+      }
+
+      .card:hover .photos img:nth-child(2) {
+        opacity: 1;
+      }
+
+      .button:hover {
+        transform: scale(1.05);
+      }
     }
   </style>
 </head>
@@ -173,6 +183,15 @@
     <p>Phone: (555) 123-4567</p>
     <p>Email: maya@example.com</p>
   </div>
+  <script>
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(function (card) {
+      card.addEventListener("click", function () {
+        card.classList.toggle("show-inside");
+      });
+    });
+  </script>
 </body>
 
 </html>
