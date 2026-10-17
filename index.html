@@ -102,7 +102,7 @@
 
     .card {
       transition: transform 0.3s ease, box-shadow 0.3s ease,
-        opacity  2s ease, translate  2s ease;
+        opacity 2s ease, translate 2s ease;
     }
 
 
@@ -142,6 +142,40 @@
     .reveal.visible {
       opacity: 1;
       translate: 0 0;
+    }
+
+    .contact-form {
+      max-width: 420px;
+      margin: 30px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      text-align: left;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    .contact-form button {
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      margin-top: 16px;
     }
   </style>
 </head>
@@ -195,6 +229,26 @@
     <h2>Contact Maya</h2>
     <p>Phone: (555) 123-4567</p>
     <p>Email: maya@example.com</p>
+    <form class="contact-form" action="https://formspree.io/f/xgaodqby" method="POST">
+      <label for="name">Your name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="contact-info">Phone or email</label>
+      <input type="text" id="contact-info" name="contact" required>
+
+      <label for="interest">I'm interested in</label>
+      <select id="interest" name="interest">
+        <option>Buying a home</option>
+        <option>Selling my home</option>
+        <option>A free home valuation</option>
+      </select>
+
+      <label for="message">Message (optional)</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit" class="button">Send</button>
+    </form>
+
   </div>
   <script>
     const cards = document.querySelectorAll(".card");
